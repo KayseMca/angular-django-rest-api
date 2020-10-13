@@ -28,9 +28,7 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": {
-              "postinstall": "ng build --output-path angularapp  --aot --prod"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
