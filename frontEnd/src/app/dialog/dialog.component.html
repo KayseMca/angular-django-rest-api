@@ -1,0 +1,8 @@
+
+<h2 mat-dialog-title>Delete?</h2>
+<mat-dialog-content>You wanna to delete <strong>{{pokemon.pokemon}}</strong></mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color='warn' (click)="onDelete()">yes</button>
+
+    <button mat-raised-button  mat-dialog-close color='primary' (click)='onClose()'>no</button>
+</mat-dialog-actions>

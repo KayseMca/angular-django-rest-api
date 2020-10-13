@@ -1,0 +1,47 @@
+<div class="container" >
+    <div class="row" *ngIf="selectedPokemon;else noPokedex && loading " >
+        <div class="col-xs-3">
+            <h3 style="color: tan;">this is {{selectedPokemon.pokemon}}</h3>
+            <p>and in his  Pokedex Details </p>
+        </div>
+        <div class="col-xs-5">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar ></div>
+                    <mat-card-title>{{selectedPokemon.pokemon}}</mat-card-title>
+                    <mat-card-subtitle>{{selectedPokemon.pokedexData.name}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]="selectedPokemon.pokedexData.imagePath" alt="pokedex photo">
+                <mat-card-content>
+                    <p>
+                        {{selectedPokemon.pokedexData.desc}}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="warn" (click)="onDelete()">Delete</button>
+                    <div class="flex-spacer"></div>
+                    <a href=""  routerLink = "/pokemons/create/{{selectedPokemon.id}}">
+                        <button mat-flat-button color="primary">Edit<mat-icon>edit</mat-icon> </button>
+                    </a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+        <div class="col-xs-4">
+            <b>Ability:</b>
+            <p class="accent"><button mat-flat-button color="green"> {{selectedPokemon.pokedexData.ability}}</button></p>
+            <b>Weaknesses:</b>
+                <ul *ngFor ="let weakness of selectedPokemon.pokedexData.weaknesses">
+                    <li class="accent"><button mat-flat-button color="green">  {{weakness}}</button></li>
+                </ul>
+
+            
+        </div>
+    </div>
+    
+    <ng-template #noPokedex><h4>This user has no Pokedex data be sure that user is exist</h4></ng-template>
+    <ng-template #loading>
+        <p *ngIf ="isLoading">Loading......</p>
+    </ng-template>
+
+</div>

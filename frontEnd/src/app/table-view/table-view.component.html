@@ -1,0 +1,42 @@
+
+<table class="table table-striped" striped="true" *ngIf = "!errorApi && !isLoading; else loading && noData ">
+    <thead>
+        <tr>
+            <th *ngFor="let head of headElements " scope="col">{{head}} </th>
+        </tr>
+    </thead>
+    <tbody >
+        <!-- routerLink="[/user, user.id]" -->
+        <tr mdbTableCol *ngFor="let userInfo of data"  >
+            
+            <th scope="row">{{userInfo.id}}</th>
+            <td>{{userInfo.pokemon}}</td>
+            <td>{{userInfo.gender}}</td>
+            <td>{{userInfo.trainer_region}}</td>
+            <td>{{userInfo.birth_year| date:'dd-MM-yyyy'}}</td>
+            <td>{{userInfo.pokedexData.name}}</td>
+            <td>
+                <a href=""  routerLink = "/pokemon/{{userInfo.id}}">
+                    <button class="btn btn-warning" mat-raised-button > More Details </button>
+                </a>
+                
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
+
+<ng-template #loading>
+    <p *ngIf ="isLoading">Loading......</p>
+</ng-template>
+<ng-template #noData>
+    <div *ngIf ="errorApi">
+        
+        <h1>404</h1>
+    <h3>Oh, You dont have any data to get the table</h3>
+    <a href="" routerLink = "/pokemons/create">Create new one</a>
+    </div>
+    
+    
+</ng-template>
+

@@ -1,0 +1,17 @@
+
+.container{
+    margin-top: 30px;
+}
+
+input.ng-invalid.ng-touched{
+    border-bottom:1px solid red;
+}
+
+span{
+    color:red
+}
+
+::ng-deep .green-snackbar {
+    background: #8ae710;
+    color:white;
+}

@@ -1,0 +1,64 @@
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <h1  style="text-align: center; font-weight: 700;">{{title}}</h1>
+            <form  [formGroup]="pokemonAddForm" (ngSubmit)="onSubmit()" >
+                <div id="user-data">
+                    <div class="form-group">
+                        <label for="username">Pokeman Name</label>
+                        <input type="text" id="username" class="form-control"   name="name"
+                            formControlName='username'>
+                        <span *ngIf="!pokemonAddForm?.get('username').valid && pokemonAddForm?.get('username').touched && isLoading">
+                        <span *ngIf="pokemonAddForm.get('username').errors['anAllowdUserName']">Already Exists userName!</span>
+                        <span *ngIf="pokemonAddForm.get('username').errors['required']">Please Enter valid Name!</span></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text">Trainer Region</label>
+                        <input type="text" id="text" class="form-control" ngDefaultControl formControlName='region' name="country">
+                        <span *ngIf="!pokemonAddForm.get('region').valid && pokemonAddForm.get('region').touched">
+                            Please Enter your Region!
+                        </span>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" class="form-control"  formControlName='gender' name="option">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Birth Date</label>
+                    <input type="date" id="text" class="form-control"  formControlName='birthDay' name="date">
+                    <span *ngIf="!pokemonAddForm.get('birthDay').valid && pokemonAddForm.get('birthDay').touched ">
+                        enter Your BirthDay please
+                    </span>
+                </div>
+                <!-- file input -->
+                <div class="form-group">
+                    <mat-form-field>
+                        <mat-label>Choose your Favourite pokedex</mat-label>
+                        <mat-select formControlName='pokedexName'>
+                            <mat-option>Choose your Favourite pokedex</mat-option>
+                            <mat-option *ngFor="let pk of pokedex" [value]="pk.id"  >
+                                <img [src]='pk.imagePath' width="100px" height="80px"> {{pk.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <span *ngIf="!pokemonAddForm.get('pokedexName').valid && pokemonAddForm.get('pokedexName').touched">
+                        Please Select your Favourite Pokedex
+                    </span>
+                </div>
+
+                <button class="btn btn-primary form-control " type="submit" [disabled]='!pokemonAddForm.valid' *ngIf ="editModu">Update Pokemon</button>
+                <button class="btn btn-primary form-control " type="submit" [disabled]='!pokemonAddForm.valid' *ngIf ="!editModu">Add Pokemon</button>
+            </form>
+        </div>
+    </div>
+</div>

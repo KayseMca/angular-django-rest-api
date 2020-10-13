@@ -1,0 +1,34 @@
+.mat-card{
+    max-width: 400px;
+
+    
+}
+
+.mat-card-avatar{
+    background-image: url('/assets/images/pokemonTitle.png');
+    background-size: cover;
+}
+.mat-card-actions{
+    display: flex;
+}
+
+.mat-card-actions .flex-spacer{
+    width: 100%;
+}
+body{
+    background-color: brown;
+}
+.accent{
+    background-color: rgb(212, 56, 36);
+    color: white;
+}
+/* ul li{
+    
+        background-color: saddlebrown;
+        color: white;
+    
+} */
+.mat-green{
+    color:white;
+    background-color: green;
+}
