@@ -30,7 +30,7 @@ export class ApiPokemonsService {
     pokemonsPath = 'http://188.166.104.17/api/pokemons/'
 
     // for pokedex data
-    pokedexPath = 'http:http://188.166.104.17/api/pokedex/'
+    pokedexPath = 'http://188.166.104.17/api/pokedex/'
 
     constructor(private http:HttpClient) { }
 
