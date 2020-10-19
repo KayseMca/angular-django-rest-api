@@ -27,10 +27,10 @@ export interface Pokemon {
 export class ApiPokemonsService {
 
     // for pokemons data
-    pokemonsPath = 'http://localhost:8000/api/pokemons/'
+    pokemonsPath = 'http://188.166.104.17/api/pokemons/'
 
     // for pokedex data
-    pokedexPath = 'http://localhost:8000/api/pokedex/'
+    pokedexPath = 'http:http://188.166.104.17/api/pokedex/'
 
     constructor(private http:HttpClient) { }
 
