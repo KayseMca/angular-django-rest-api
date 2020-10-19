@@ -2,14 +2,6 @@
   "name": "crud-project",
   "version": "0.0.0",
   "scripts": {
-    // "ng": "ng",
-    // "build": "ng build",
-    // "start": "node server.js",
-    // "test": "ng test",
-    // "lint": "ng lint",
-    // "e2e": "ng e2e",
-    // "postinstall": "ng build --output-path angularapp  --aot --prod",
-    // "heroku-postbuild": "ng build --prod"
     "ng": "ng",
     "dev": "ng serve",
     "start": "node server.js",
@@ -17,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "postinstall": "ng build --output-path angularapp  --aot --prod",
     "heroku-postbuild": "ng build --aot -prod",
     "deploy": "git push origin master && git push heroku master"
   },
@@ -68,4 +61,3 @@
     "typescript": "~3.9.5"
   }
 }
-// comming
