@@ -1,21 +1,26 @@
+
 {
   "name": "crud-project",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --output-path angularapp  --aot --prod"
+    "postinstall": "ng build --output-path angularapp  --aot --prod",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^10.0.8",
     "@angular/cdk": "^10.1.1",
+    "@angular/cli": "~10.0.3",
     "@angular/common": "~10.0.4",
     "@angular/compiler": "~10.0.4",
+    "@angular/compiler-cli": "~10.0.4",
     "@angular/core": "~10.0.4",
     "@angular/forms": "~10.0.4",
     "@angular/material": "^10.1.1",
@@ -23,11 +28,13 @@
     "@angular/platform-browser-dynamic": "~10.0.4",
     "@angular/router": "~10.0.4",
     "bootstrap": "^3.4.1",
+    "express": "^4.17.1",
     "ngx-toastr": "^13.0.0",
+    "path": "^0.12.7",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.3",
-    "typescript": "~3.9.5"
+    "typescript": "~3.9.5",
+    "zone.js": "~0.10.3"
   },
   "engines": {
     "node": "10",
