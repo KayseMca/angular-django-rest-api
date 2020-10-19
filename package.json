@@ -1,4 +1,5 @@
 {
+  
   "name": "crud-project",
   "version": "0.0.0",
   "scripts": {
@@ -10,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --output-path angularapp  --aot --prod",
-    "heroku-postbuild": "ng build --aot -prod",
+    "heroku-postbuild": "ng build  -prod",
     "deploy": "git push origin master && git push heroku master"
   },
   "private": true,
