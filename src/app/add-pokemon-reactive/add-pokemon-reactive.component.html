@@ -10,7 +10,7 @@
                         <label for="username">Pokeman Username</label>
                         <input type="text" id="username" class="form-control"   name="name"
                             formControlName='username'>
-                        <span *ngIf="!pokemonAddForm?.get('username').valid && pokemonAddForm?.get('username').touched && isLoading">
+                        <span *ngIf="!pokemonAddForm?.get('username').valid && pokemonAddForm.get('username').touched">
                         <!-- <span *ngIf="pokemonAddForm.get('username').errors['anAllowdUserName']">Already Exists userName!</span> -->
                         <span *ngIf="pokemonAddForm.get('username').errors['required']">Please Enter valid Username!</span></span>
                     </div>
