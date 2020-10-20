@@ -19,6 +19,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { AddPokemonReactiveComponent } from './add-pokemon-reactive/add-pokemon-reactive.component';
 import { ApiPokemonsService } from './services/apiPokemons.service';
 import { DialogComponent } from './dialog/dialog.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { DialogComponent } from './dialog/dialog.component';
     ItemDetailsComponent,
     AddPokemonReactiveComponent,
     DialogComponent,
+    FooterComponent,
     
   ],
   entryComponents:[DialogComponent],
