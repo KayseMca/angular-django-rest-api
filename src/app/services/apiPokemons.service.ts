@@ -27,10 +27,12 @@ export interface Pokemon {
 export class ApiPokemonsService {
 
     // for pokemons data
-    pokemonsPath = 'https://pokemon-rest-data.herokuapp.com/api/pokemons/'
+    pokemonsPath = "http://188.166.104.17/api/pokemons/"
+    // 'https://pokemon-rest-data.herokuapp.com/api/pokemons/'
 
     // for pokedex data
-    pokedexPath = 'https://pokemon-rest-data.herokuapp.com/api/pokedex/'
+    pokedexPath = "http://188.166.104.17/api/pokedex/"
+    // ö'https://pokemon-rest-data.herokuapp.com/api/pokedex/'
 
     constructor(private http:HttpClient) { }
 
